@@ -1,9 +1,10 @@
 import MercedesImage from '../assets/mercedes.png'
 
+
 function LandingPage() {
   return (
     <div className='pt-20 flex flex-col md:flex-row-reverse  justify-center text-center align-middle m-auto w-full min-h-screen'>
-        <img src={MercedesImage} className=' md:w-1/2 self-center' alt="Mercedes Vito mini-bus picture" />
+        <img src={MercedesImage} className=' md:w-1/2 self-center' alt="Mercedes Vito mini-bus" />
         <div className='flex flex-col text-center justify-center'>
             <div>
                 <h1 className='font-Roboto-Condensed text-white font-bold text-7xl md:text-8xl text-center drop-shadow-md z-10'>Travel <span className='text-[#F0A04B]'>Big</span> at low prices</h1>

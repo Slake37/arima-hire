@@ -4,6 +4,11 @@ import Navbar from "./components/Navbar";
 import Services from "./components/Services";
 import { Route,Routes } from "react-router-dom";
 import AirportTransfer from "./pages/AirportTransfer";
+import DayOut from "./pages/DayOut";
+import NightOut from "./pages/NightOut";
+import WhatsAppWidget from "react-whatsapp-chat-widget"
+import "react-whatsapp-chat-widget/index.css"
+import Icon from './assets/Favicon/android-chrome-512x512.png'
 
 function App() {
   return (
@@ -12,9 +17,37 @@ function App() {
       <Routes>
         <Route path='/aboutus' element={<AboutUs/>}/>
         <Route path='/services' element={<Services/>}/>
-        <Route path='/home' element={<LandingPage/>}/>
+        <Route path='/' element={<LandingPage/>}/>
         <Route path ='/services/airporttransfer' element={<AirportTransfer/>}/>
+        <Route path ='/services/dayout' element={<DayOut/>}/>
+        <Route path= '/services/nightout' element={<NightOut/>}/>
       </Routes>
+       <WhatsAppWidget
+			phoneNo="447474829448"
+			position="right"
+			widgetWidth="300px"
+			widgetWidthMobile="260px"
+			autoOpen={false}
+			autoOpenTimer={5000}
+			messageBox={true}
+			messageBoxTxt=""
+			iconSize="60"
+			iconColor="white"
+			iconBgColor="green"
+			headerIcon={Icon}
+			headerIconColor="pink"
+			headerTxtColor="yellow"
+			headerBgColor="green"
+			headerTitle="Arima Hire"
+			headerCaption="Online"
+			bodyBgColor="#bbb"
+			chatPersonName="Johnny"
+			footerBgColor="#999"
+			placeholder="Type a message.."
+			btnBgColor="green"
+			btnTxt="Start Chat"
+			btnTxtColor="black"
+		/>
     </div>
   );
 }

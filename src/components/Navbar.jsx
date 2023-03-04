@@ -13,7 +13,7 @@ function Navbar() {
   return (
     <div className="fixed bg-[#183A1D] w-full p-3 flex justify-between align-middle m-auto md:p-5 z-20 top-0 ">
         {/* Small screens navigation */}
-        <Link to='home' onClick={!toggle}>
+        <Link to='/' onClick={!toggle}>
              <div  className="flex justify-start align-center  font-Roboto-Condensed text-xl uppercase cursor-pointer">
             <h3 className="text-[#F0A04B] border-l-4 border-b-4 p-1 font-bold">Arima</h3>
             <h3 className="text-white border-t-4 border-r-4 border-[#F0A04B] font-bold pr-1">Hire</h3>

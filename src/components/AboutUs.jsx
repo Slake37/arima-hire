@@ -2,7 +2,7 @@ import React from 'react'
 
 function AboutUs() {
   return (
-    <div className='font-Roboto-Condensed w-full'>
+    <div className='font-Roboto-Condensed w-full pt-20'>
         <h2 className='text-[#F0A04B] font-bold text-4xl drop-shadow-lg m-6 md:text-5xl underline'>About us</h2>
         <div className='flex justify-between'>
         

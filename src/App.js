@@ -9,6 +9,7 @@ import NightOut from "./pages/NightOut";
 import WhatsAppWidget from "react-whatsapp-chat-widget"
 import "react-whatsapp-chat-widget/index.css"
 import Icon from './assets/Favicon/android-chrome-512x512.png'
+import Wedding from "./pages/Wedding";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path ='/services/airporttransfer' element={<AirportTransfer/>}/>
         <Route path ='/services/dayout' element={<DayOut/>}/>
         <Route path= '/services/nightout' element={<NightOut/>}/>
+        <Route path='/services/wedding' element={<Wedding/>}/>
       </Routes>
        <WhatsAppWidget
 			phoneNo="447564881729"

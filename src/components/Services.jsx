@@ -43,7 +43,10 @@ function Services() {
                 <img src={wedding} className='w-full md:w-[400px]  rounded-md' alt="People attending at a wedding"  />
                 <div className='flex justify-between items-center mt-3 w-full md:justify-around'>
                     <p className='font-medium text-lg'>Wedding</p>
-                    <FiMoreHorizontal className='text-3xl self-center border-2 p-1 border-black rounded-md cursor-pointer'/>
+                    <Link to='wedding'>
+                        <FiMoreHorizontal className='text-3xl self-center border-2 p-1 border-black rounded-md cursor-pointer'/>
+                    </Link>
+                    
                 </div>
             </div>
             <div className='flex flex-col justify-center items-center text-center m-3 shadow-2xl bg-[#FEFBE9] p-3 rounded-xl'>

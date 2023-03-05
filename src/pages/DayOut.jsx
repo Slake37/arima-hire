@@ -9,9 +9,9 @@ function DayOut() {
          <div className='p-2 flex flex-col justify-center items-center  md:flex-row w-full overflow-hidden'>
             <img src={dayOut} alt="Airplane landing" className='w-full md:w-1/3 rounded-lg drop-shadow-2xl' />
             <p className='p-2 text-xl md:text-2xl m-2'>
-                Looking to explore the best attractions in town with your friends or family? Look no further than Arima Hire's day out transport service! Our reliable and comfortable private hire taxis are perfect for your day trip needs, whether you're planning a visit to a nearby attraction, a scenic drive in the countryside, or a fun day out at a theme park.
+                Looking to explore the best attractions in town with your friends or family? Look no further than Arima Hire's day out transport service! Our reliable and comfortable private hire taxi is perfect for your day trip needs, whether you're planning a visit to a nearby attraction, a scenic drive in the countryside, or a fun day out at a theme park.
 
-With our affordable rates and flexible scheduling options, you can enjoy a stress-free and convenient ride to your destination, without worrying about parking or navigating through traffic. Our friendly and experienced drivers are dedicated to providing you with a safe and enjoyable journey, and are always ready to answer any questions you may have about the area.
+With our affordable rates and flexible scheduling options, you can enjoy a stress-free and convenient ride to your destination, without worrying about parking or navigating through traffic. Our friendly and experienced driver is dedicated to providing you with a safe and enjoyable journey, and is always ready to answer any questions you may have about the area.
 
 So why wait? Book your day out transport service with Arima Hire today and make your trip one to remember!
                 <Link to='/services'>

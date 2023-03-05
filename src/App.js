@@ -13,11 +13,12 @@ import Wedding from "./pages/Wedding";
 import Event from "./pages/Event";
 import Reviews from "./components/Reviews";
 import Contact from "./components/Contact";
+import MeetYourDriver from "./components/MeetYourDriver";
 
 
 function App() {
   return (
-    <div className="bg-gradient-to-b from-[#183A1D] to-[#E1EEDD] min-h-screen max-w-[1690px] m-auto">
+    <div className="bg-gradient-to-b from-[#183A1D] to-[#E1EEDD] min-h-screen max-w-[1690px] m-auto font-Roboto-Condensed">
       <Navbar/>
       <Routes>
         <Route path='/aboutus' element={<AboutUs/>}/>
@@ -25,6 +26,7 @@ function App() {
         <Route path='/' element={<LandingPage/>}/>
         <Route path='/reviews' element={<Reviews/>}/>
         <Route path='/contact' element={<Contact/>}/>
+        <Route path='/meetyourdriver' element={<MeetYourDriver/>}/>
         <Route path ='/services/airporttransfer' element={<AirportTransfer/>}/>
         <Route path ='/services/dayout' element={<DayOut/>}/>
         <Route path= '/services/nightout' element={<NightOut/>}/>

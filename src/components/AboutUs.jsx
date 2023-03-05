@@ -2,8 +2,8 @@ import React from 'react'
 
 function AboutUs() {
   return (
-    <div className='font-Roboto-Condensed w-full pt-20 md:w-1/2 mx-auto '>
-        <h2 className='text-[#F0A04B] font-bold text-4xl drop-shadow-lg m-6 md:text-5xl underline'>About us</h2>
+    <div className='font-Roboto-Condensed w-full py-[7rem] md:w-1/2 mx-auto  '>
+        <h2 className='text-[#FEFBE9] font-Roboto-Condensed font-bold text-2xl px-3 md:text-3xl'>About us</h2>
         <div className='flex justify-between '>
         
         <div className='flex-1/2'>

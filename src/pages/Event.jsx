@@ -9,9 +9,9 @@ function Event() {
          <div className='p-2 flex flex-col justify-center items-center  md:flex-row w-full overflow-hidden'>
             <img src={event} alt="People attending to a cooking event" className='w-full md:w-1/3 rounded-lg drop-shadow-2xl' />
             <p className='p-2 text-xl md:text-2xl m-2'>
-                Make your next event a success with Arima Hire's premier event transport service. Whether you're hosting a corporate function, wedding, or other special occasion, our private hire taxis offer a comfortable and reliable transportation solution for you and your guests.
+                Make your next event a success with Arima Hire's premier event transport service. Whether you're hosting a corporate function, wedding, or other special occasion, our private hire taxi offer a comfortable and reliable transportation solution for you and your guests.
 
-With our fleet of well-maintained vehicles and professional drivers, we'll get you to your destination on time and in style. From pre-planning to execution, our dedicated team will work with you every step of the way to ensure a seamless and stress-free transportation experience.
+ From pre-planning to execution, our dedicated team will work with you every step of the way to ensure a seamless and stress-free transportation experience.
 
 Trust Arima Hire to provide safe and comfortable event transport service that will leave a lasting impression on your guests. Contact us today to learn more about our services and to book your next event transport.
                 <Link to='/services'>

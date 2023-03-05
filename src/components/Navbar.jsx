@@ -32,6 +32,9 @@ function Navbar() {
                 <Link to='aboutus' onClick={!toggle}>
                     <li className="hover:bg-[#183A1D] hover:text-[#E1EEDD] p-2 w-full flex mb-5">About</li>
                 </Link>
+                <Link to='meetyourdriver' onClick={!toggle}>
+                    <li className="hover:bg-[#183A1D] hover:text-[#E1EEDD] p-2 w-full flex mb-5">Meet your driver</li>
+                </Link>
                 <Link to='services' onClick={!toggle}>
                     <li className="hover:bg-[#183A1D] hover:text-[#E1EEDD] p-2 w-full flex mb-5">Services</li>
                 </Link>
@@ -48,6 +51,9 @@ function Navbar() {
             <ul className="flex justify-center align-middle text-[#F0A04B]">
                 <Link to='aboutus'>
                     <li className="m-2 hover:text-[#E1EEDD] cursor-pointer">About</li>
+                </Link>
+                 <Link to='meetyourdriver'>
+                    <li className="m-2 hover:text-[#E1EEDD] cursor-pointer">Meet your driver</li>
                 </Link>
                 <Link to='services'>
                     <li className="m-2 hover:text-[#E1EEDD] cursor-pointer">Services</li>

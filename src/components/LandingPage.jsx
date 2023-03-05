@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import MercedesImage from '../assets/mercedes.png'
 
 
@@ -10,7 +11,9 @@ function LandingPage() {
                 <h1 className='font-Roboto-Condensed text-white font-bold text-7xl md:text-8xl text-center drop-shadow-md z-10'>Travel <span className='text-[#F0A04B]'>Big</span> at low prices</h1>
             </div>
             <div>
+              <Link to='contact'>
                 <h2 className='text-white underline font-bold text-2xl mt-5 cursor-pointer'>Book a travel</h2>
+              </Link>
                 <p className='text-white '>or</p>
                 <h3 className='text-white text-xl font-bold'>Give us a call or a text:</h3>
                 <h3 className='text-white text-xl font-bold'>07564 881729</h3>

@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 
 function Services() {
   return (
-    <div className='mt-[4rem] md:mt-[5rem] pt-2 '>
+    <div className='mt-[4rem] md:mt-[5rem] pt-2 pb-20 '>
         <h2 className='text-[#F0A04B] font-bold text-4xl drop-shadow-lg m-6 md:text-5xl underline'>Services</h2>
         <div className='flex flex-col md:grid grid-cols-3 justify-center p-5'>
             <div className='flex flex-col justify-center items-center text-center m-3 shadow-2xl bg-[#FEFBE9] p-3 rounded-xl'>
@@ -53,7 +53,9 @@ function Services() {
                 <img src={event} className='w-full md:w-[400px]  rounded-md' alt="People attending at an event" />
                 <div className='flex justify-between items-center mt-3 w-full md:justify-around'>
                     <p className='font-medium text-lg'>Event</p>
-                    <FiMoreHorizontal className='text-3xl self-center border-2 p-1 border-black rounded-md cursor-pointer'/>
+                    <Link to='event'>
+                        <FiMoreHorizontal className='text-3xl self-center border-2 p-1 border-black rounded-md cursor-pointer'/>
+                    </Link>
                 </div>
             </div>
         </div>

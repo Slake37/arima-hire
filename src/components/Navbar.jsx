@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
-
+import {BsFacebook} from 'react-icons/bs'
 
 function Navbar() {
     const[toggle,setToggle] = useState(true)
@@ -11,7 +11,7 @@ function Navbar() {
     }
 
   return (
-    <div className="fixed bg-[#183A1D] w-full p-3 flex justify-between align-middle m-auto md:p-5 z-20 top-0 ">
+    <div className="fixed bg-[#183A1D] w-full p-3 flex justify-between align-middle items-center m-auto md:p-5 z-20 top-0 ">
         {/* Small screens navigation */}
         <Link to='/' onClick={!toggle}>
              <div  className="flex justify-start align-center  font-Roboto-Condensed text-xl uppercase cursor-pointer">
@@ -19,6 +19,9 @@ function Navbar() {
             <h3 className="text-white border-t-4 border-r-4 border-[#F0A04B] font-bold pr-1">Hire</h3>
         </div>
         </Link>
+        <a href="https://www.facebook.com/profile.php?id=100088248557047" target='_blank'><h1 className="text-[#F0A04B] flex justify-center items-center">Follow us on <BsFacebook className="mx-2"/> </h1></a>
+            
+        
         <div className="flex flex-col justify-center md:hidden cursor-pointer" onClick={toggelingNavBar}>
             <div className="bg-[#F0A04B] w-10 h-1 mb-2"></div>
             <div className="bg-[#F0A04B] w-10 h-1 mb-2"></div>
@@ -32,17 +35,29 @@ function Navbar() {
                 <Link to='services' onClick={!toggle}>
                     <li className="hover:bg-[#183A1D] hover:text-[#E1EEDD] p-2 w-full flex mb-5">Services</li>
                 </Link>
-                <li className="hover:bg-[#183A1D] hover:text-[#E1EEDD] p-2 w-full flex mb-5">Contact</li>
-                <li className="hover:bg-[#183A1D] hover:text-[#E1EEDD] p-2 w-full flex">Reviews</li>
+                <Link to='reviews' onClick={!toggle}>
+                    <li className="hover:bg-[#183A1D] hover:text-[#E1EEDD] p-2 w-full flex mb-5">Reviews</li>
+                </Link>
+                <Link to='contact' onClick={!toggle}>
+                    <li className="hover:bg-[#183A1D] hover:text-[#E1EEDD] p-2 w-full flex">Contact</li>
+                </Link>
             </ul>
         </div>
         {/* Big screens navigations */}
         <div className="md:flex hidden">
             <ul className="flex justify-center align-middle text-[#F0A04B]">
-                <li className="m-2 hover:text-[#E1EEDD] cursor-pointer">About</li>
-                <li className="m-2 hover:text-[#E1EEDD] cursor-pointer">Services</li>
-                <li className="m-2 hover:text-[#E1EEDD] cursor-pointer">Contact</li>
-                <li className="m-2 hover:text-[#E1EEDD] cursor-pointer">Reviews</li>
+                <Link to='aboutus'>
+                    <li className="m-2 hover:text-[#E1EEDD] cursor-pointer">About</li>
+                </Link>
+                <Link to='services'>
+                    <li className="m-2 hover:text-[#E1EEDD] cursor-pointer">Services</li>
+                </Link>
+                <Link to='reviews'>
+                    <li className="m-2 hover:text-[#E1EEDD] cursor-pointer">Reviews</li>
+                </Link>
+                <Link to='contact'>
+                    <li className="m-2 hover:text-[#E1EEDD] cursor-pointer">Contact</li>
+                </Link>
             </ul>
         </div>
     </div>

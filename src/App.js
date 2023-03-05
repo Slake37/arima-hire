@@ -10,6 +10,10 @@ import WhatsAppWidget from "react-whatsapp-chat-widget"
 import "react-whatsapp-chat-widget/index.css"
 import Icon from './assets/Favicon/android-chrome-512x512.png'
 import Wedding from "./pages/Wedding";
+import Event from "./pages/Event";
+import Reviews from "./components/Reviews";
+import Contact from "./components/Contact";
+
 
 function App() {
   return (
@@ -19,10 +23,13 @@ function App() {
         <Route path='/aboutus' element={<AboutUs/>}/>
         <Route path='/services' element={<Services/>}/>
         <Route path='/' element={<LandingPage/>}/>
+        <Route path='/reviews' element={<Reviews/>}/>
+        <Route path='/contact' element={<Contact/>}/>
         <Route path ='/services/airporttransfer' element={<AirportTransfer/>}/>
         <Route path ='/services/dayout' element={<DayOut/>}/>
         <Route path= '/services/nightout' element={<NightOut/>}/>
         <Route path='/services/wedding' element={<Wedding/>}/>
+        <Route path='/services/event' element={<Event/>}/>
       </Routes>
        <WhatsAppWidget
 			phoneNo="447564881729"

@@ -14,6 +14,7 @@ import Event from "./pages/Event";
 import Reviews from "./components/Reviews";
 import Contact from "./components/Contact";
 import MeetYourDriver from "./components/MeetYourDriver";
+import ThankYou from "./pages/ThankYou";
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path= '/services/nightout' element={<NightOut/>}/>
         <Route path='/services/wedding' element={<Wedding/>}/>
         <Route path='/services/event' element={<Event/>}/>
+        <Route path='/contact/thankyou' element={<ThankYou/>}/>
       </Routes>
        <WhatsAppWidget
 			phoneNo="447564881729"

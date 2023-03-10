@@ -35,7 +35,7 @@ function App() {
         <Route path='/services/event' element={<Event/>}/>
         <Route path='/contact/thankyou' element={<ThankYou/>}/>
       </Routes>
-       <WhatsAppWidget
+       <WhatsAppWidget className='md:hidden'
 			phoneNo="447564881729"
 			position="right"
 			widgetWidth="300px"

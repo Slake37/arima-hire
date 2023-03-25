@@ -9,9 +9,10 @@ function Contact() {
     surname: "",
     phoneNumber: "",
     email: "",
+    pending:true
   })
 
-  const {name,surname,phoneNumber, email} = formData
+  const {name,surname,phoneNumber, email,pending} = formData
 
   const handleChange = (e) => {
     setFormData ((prevState) => ({

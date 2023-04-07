@@ -4,13 +4,7 @@ import { db } from "../firebase.config";
 import { useNavigate } from "react-router-dom";
 
 function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    surname: "",
-    phoneNumber: "",
-    email: "",
-    pending:true
-  })
+
 
    /** @type React.MutableRefObject<HTMLInputElement> */
   const nameRef = useRef()
@@ -21,7 +15,7 @@ function Contact() {
    /** @type React.MutableRefObject<HTMLInputElement> */
   const emailRef = useRef()
 
-  const {name,surname,phoneNumber, email,pending} = formData
+ 
 
  
 

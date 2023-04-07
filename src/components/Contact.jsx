@@ -12,16 +12,18 @@ function Contact() {
     pending:true
   })
 
+   /** @type React.MutableRefObject<HTMLInputElement> */
+  const nameRef = useRef()
+   /** @type React.MutableRefObject<HTMLInputElement> */
+  const surnameRef = useRef()
+   /** @type React.MutableRefObject<HTMLInputElement> */
+  const phoneRef = useRef()
+   /** @type React.MutableRefObject<HTMLInputElement> */
+  const emailRef = useRef()
+
   const {name,surname,phoneNumber, email,pending} = formData
 
-  const handleChange = (e) => {
-    setFormData ((prevState) => ({
-      
-        ...prevState,
-        [e.target.id]:e.target.value
-      }))
-    
-  }
+ 
 
   
   const navigate = useNavigate();
@@ -29,14 +31,17 @@ function Contact() {
 
   const handleSubmit = async (e) =>{
     e.preventDefault()
-    try{
-      const formDataCopy = {formData}
-      formDataCopy.timeStamp = serverTimestamp()
-      const docRef = await addDoc(collection(db,'bookings'),formDataCopy)
+   
+      await addDoc(collection(db,'bookings'),{
+        name:nameRef.current.value,
+        surname:surnameRef.current.value,
+        phone:phoneRef.current.value,
+        email:emailRef.current.value,
+        pending:true,
+        timestamp:serverTimestamp()
+      })
       navigate('/contact/thankyou')
-    }catch(e){
-      console.error(e)
-    }
+    
   }
 
 
@@ -46,40 +51,44 @@ function Contact() {
         Booking form
       </h1>
       <p className="text-[#E1EEDD]">Please fill in the form for a free quote</p>
-      <form className="mt-4 flex flex-col w-full md:w-1/2 items-center justify-center my-auto" autocomplete="off" onSubmit={handleSubmit}>
+      <form className="mt-4 flex flex-col w-full md:w-1/2 items-center justify-center my-auto" autoComplete="off" onSubmit={handleSubmit}>
         <input
           type="text"
-          name="name"
-          value={name}
-          onChange={handleChange}
-          id="name"
+          name=""
+          required
+          
+          id=""
+          ref={nameRef}
           placeholder="Your name"
           className="p-2 text-md w-full rounded-sm my-2 bg-[#E1EEDD] outline-none"
         />
         <input
           type="text"
-          name="surname"
-          value={formData.surname}
-          onChange={handleChange}
-          id="surname"
+          name=""
+          ref={surnameRef}
+          required
+         
+          id=""
           placeholder="Your surname"
           className="p-2 text-md w-full rounded-sm my-2 bg-[#E1EEDD] outline-none"
         />
         <input
           type="text"
-          name="phoneNumber"
-          value={formData.phoneNumber}
-          onChange={handleChange}
-          id="phoneNumber"
+          name=""
+          
+          ref={phoneRef}
+         required
+          id=""
           placeholder="Your phone number"
           className="p-2 text-md w-full rounded-sm my-2 bg-[#E1EEDD] outline-none"
         />
         <input
           type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          id="email"
+         
+          
+          
+          ref={emailRef}
+          id=""
           placeholder="Your email"
           className="p-2 text-md w-full rounded-sm my-2 bg-[#E1EEDD] outline-none"
         />

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 function ThankYou() {
   return (
-    <div className='pt-20 flex flex-col justify-center items-center min-h-screen leading-10'>
+    <div className='pt-20 flex flex-col justify-center items-center min-h-screen leading-10 p-5'>
         <h1 className='text-white md:text-4xl text-3xl font-bold'>Thank you for your submision</h1>
         <h2 className="font-bold text-lg">Our driver will contact you for a free and fair quote</h2>
         <Link to='/'>   

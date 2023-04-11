@@ -1,10 +1,10 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../firebase.config";
 import { useNavigate } from "react-router-dom";
 
 function Contact() {
-
+  const[method, setMethod] = useState('')
 
    /** @type React.MutableRefObject<HTMLInputElement> */
   const nameRef = useRef()
@@ -16,7 +16,10 @@ function Contact() {
   const emailRef = useRef()
 
  
-
+  const onOptionChange = e => {
+    setMethod(e.target.value)
+    console.log(method)
+  }
  
 
   
@@ -32,7 +35,8 @@ function Contact() {
         phone:phoneRef.current.value,
         email:emailRef.current.value,
         pending:true,
-        timestamp:serverTimestamp()
+        timestamp:serverTimestamp(),
+        contactMethod:method
       })
       navigate('/contact/thankyou')
     
@@ -86,6 +90,15 @@ function Contact() {
           placeholder="Your email"
           className="p-2 text-md w-full rounded-sm my-2 bg-[#E1EEDD] outline-none"
         />
+        <div className="flex flex-col justify-start items-start w-full">
+          <h3 className="text-md font-semibold">Your prefered contect method</h3>
+          <div>
+            <input type="radio" name="method" id="phone" value='Phone'  checked={method==='Phone'} onChange={onOptionChange} className="mx-1" />
+            <label htmlFor="phone">Phone</label>
+            <input type="radio" name="method" id="email" value='Email' checked={method === 'Email'} onChange={onOptionChange} className="mx-1" />
+            <label htmlFor="email">E-mail</label>
+          </div>
+        </div>
         <input
           type="submit"
           value="Submit"

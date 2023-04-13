@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 function Contact() {
   const[method, setMethod] = useState('')
+  const[service, setService] = useState('')
 
    /** @type React.MutableRefObject<HTMLInputElement> */
   const nameRef = useRef()
@@ -36,7 +37,8 @@ function Contact() {
         email:emailRef.current.value,
         pending:true,
         timestamp:serverTimestamp(),
-        contactMethod:method
+        contactMethod:method,
+        service:service
       })
       navigate('/contact/thankyou')
     
@@ -90,7 +92,16 @@ function Contact() {
           placeholder="Your email"
           className="p-2 text-md w-full rounded-sm my-2 bg-[#E1EEDD] outline-none"
         />
-        <div className="flex flex-col justify-start items-start w-full">
+        <select name="" id="" onChange={e=>setService(e.target.value)} className="p-2 text-md w-full rounded-sm my-2 bg-[#E1EEDD] outline-none">
+          <option value="">Select the service you want a quote for</option>
+          <option value="airport transfer">Airport transfer</option>
+          <option value="wedding">Wedding</option>
+          <option value="day out">Day out</option>
+          <option value="night out">Night out</option>
+          <option value="event">Event</option>
+          <option value="other">Other</option>
+        </select>
+        <div className="p-2 text-md w-full rounded-sm my-2  outline-none">
           <h3 className="text-md font-semibold">Your prefered contect method</h3>
           <div>
             <input type="radio" name="method" id="phone" value='Phone'  checked={method==='Phone'} onChange={onOptionChange} className="mx-1" />

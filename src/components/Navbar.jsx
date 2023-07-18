@@ -41,7 +41,7 @@ function Navbar() {
                     <li className="hover:bg-[#183A1D] hover:text-[#E1EEDD] p-2 w-full flex mb-5">Reviews</li>
                 </Link>
                 <Link to='contact' onClick={!toggle}>
-                    <li className="hover:bg-[#183A1D] hover:text-[#E1EEDD] p-2 w-full flex">Book a travel</li>
+                    <li className="hover:bg-[#183A1D] hover:text-[#E1EEDD] p-2 w-full flex">Get a quote</li>
                 </Link>
             </ul>
         </div>
@@ -61,7 +61,7 @@ function Navbar() {
                     <li className="m-2 hover:text-[#E1EEDD] cursor-pointer">Reviews</li>
                 </Link>
                 <Link to='contact'>
-                    <li className="m-2 hover:text-[#E1EEDD] cursor-pointer">Book a travel</li>
+                    <li className="m-2 hover:text-[#E1EEDD] cursor-pointer">Get a quote</li>
                 </Link>
             </ul>
         </div>

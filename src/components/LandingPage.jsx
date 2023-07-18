@@ -12,7 +12,7 @@ function LandingPage() {
             </div>
             <div>
               <Link to='contact'>
-                <h2 className='text-white underline font-bold text-2xl mt-5 cursor-pointer'>Book a travel</h2>
+                <h2 className='text-white underline font-bold text-2xl mt-5 cursor-pointer'>Get a quote</h2>
               </Link>
                 <p className='text-white '>or</p>
                 <h3 className='text-white text-xl font-bold'>Give us a call or a text:</h3>

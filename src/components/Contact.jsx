@@ -2,40 +2,21 @@ import { useRef, useState } from "react";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../firebase.config";
 import { useNavigate } from "react-router-dom";
-
-
-
-
-
+import { FiAlertCircle } from "react-icons/fi";
 
 function Contact() {
   const [method, setMethod] = useState("");
   const [service, setService] = useState("");
-  
-  
 
-
-  
-  
-
- 
-
-
-
- 
-
-  
   /** @type React.MutableRefObject<HTMLInputElement> */
   const nameRef = useRef();
- 
+
   /** @type React.MutableRefObject<HTMLInputElement> */
   const phoneRef = useRef();
   /** @type React.MutableRefObject<HTMLInputElement> */
   const emailRef = useRef();
   /** @type React.MutableRefObject<HTMLInputElement> */
-  const detailsRef = useRef()
-
-  
+  const detailsRef = useRef();
 
   const onOptionChange = (e) => {
     setMethod(e.target.value);
@@ -55,13 +36,10 @@ function Contact() {
       timestamp: serverTimestamp(),
       contactMethod: method,
       service: service,
-      details:detailsRef.current.value
-      
+      details: detailsRef.current.value,
     });
     navigate("/contact/thankyou");
   };
-
-  
 
   return (
     <div className="py-10 flex  flex-col lg:flex-row mx-auto">
@@ -71,6 +49,11 @@ function Contact() {
         </h1>
         <p className="text-[#E1EEDD]">
           Please fill in the form for a free quote
+        </p>
+        <p className="text-center flex justify-center items-center gap-2 mt-2 bg-red-500 text-white font-bold p-3 rounded-md">
+          <FiAlertCircle className="text-white hidden md:flex " />
+          If your prefered contact method is e-mail please check your Spam
+          folder also
         </p>
         <form
           className="mt-4 flex flex-col w-full lg:w-1/2 items-center justify-center my-auto px-3"
@@ -103,7 +86,7 @@ function Contact() {
             placeholder="Your email"
             className="p-2 text-md w-full rounded-sm my-2 bg-[#E1EEDD] outline-none"
           />
-           
+
           <select
             onChange={(e) => setService(e.target.value)}
             className="p-2 text-md w-full rounded-sm my-2 bg-[#E1EEDD] outline-none"
@@ -116,7 +99,13 @@ function Contact() {
             <option value="event">Event</option>
             <option value="other">Other</option>
           </select>
-          <textarea ref={detailsRef}  cols="30" rows="8" className="w-full p-2 outline-none bg-[#E1EEDD]" placeholder='Please provide more details about your booking'></textarea>
+          <textarea
+            ref={detailsRef}
+            cols="30"
+            rows="8"
+            className="w-full p-2 outline-none bg-[#E1EEDD]"
+            placeholder="Please provide more details about your booking"
+          ></textarea>
           <div className="p-2 text-md w-full rounded-sm my-2  outline-none">
             <h3 className="text-md font-semibold">
               Your prefered contact method

@@ -172,6 +172,57 @@ function Reviews() {
           <BsFillStarFill className="text-[#F0A04B] mx-1" />
         </div>
       </div>
+      <div className="border-2 p-3 rounded-md drop-shadow-2xl my-3 ">
+        <h3 className="text-black text-xl font-medium underline">
+          Margaret Murray
+        </h3>
+        <p className="text-black font-normal">
+          Excellent service from a courteous and friendly driver. Always
+          punctual, helpful and clean vehicle. Five stars every time
+        </p>
+        <div className="flex mt-3 justify-end">
+          <BsFillStarFill className="text-[#F0A04B] mx-1" />
+          <BsFillStarFill className="text-[#F0A04B] mx-1" />
+          <BsFillStarFill className="text-[#F0A04B] mx-1" />
+          <BsFillStarFill className="text-[#F0A04B] mx-1" />
+          <BsFillStarFill className="text-[#F0A04B] mx-1" />
+        </div>
+      </div>
+      <div className="border-2 p-3 rounded-md drop-shadow-2xl my-3 ">
+        <h3 className="text-black text-xl font-medium underline">
+          Kevin Twinn
+        </h3>
+        <p className="text-black font-normal">
+          Easy to book and great service provided by Jonny. We used them for
+          drop off and pick up from airport and everything was professional and
+          spot on times. We would recommend and happily use them again.
+        </p>
+        <div className="flex mt-3 justify-end">
+          <BsFillStarFill className="text-[#F0A04B] mx-1" />
+          <BsFillStarFill className="text-[#F0A04B] mx-1" />
+          <BsFillStarFill className="text-[#F0A04B] mx-1" />
+          <BsFillStarFill className="text-[#F0A04B] mx-1" />
+          <BsFillStarFill className="text-[#F0A04B] mx-1" />
+        </div>
+      </div>
+      <div className="border-2 p-3 rounded-md drop-shadow-2xl my-3 ">
+        <h3 className="text-black text-xl font-medium underline">
+          Chris Yorke
+        </h3>
+        <p className="text-black font-normal">
+          Excellent service from Jonny! He picked us up at 03:45 in the morning
+          to go to the airport and there were no issues or worries about him
+          being on time! Great communication on our return about pick up and
+          location. 10/10 will definitely use again. Thanks again.
+        </p>
+        <div className="flex mt-3 justify-end">
+          <BsFillStarFill className="text-[#F0A04B] mx-1" />
+          <BsFillStarFill className="text-[#F0A04B] mx-1" />
+          <BsFillStarFill className="text-[#F0A04B] mx-1" />
+          <BsFillStarFill className="text-[#F0A04B] mx-1" />
+          <BsFillStarFill className="text-[#F0A04B] mx-1" />
+        </div>
+      </div>
     </div>
   );
 }
